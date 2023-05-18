@@ -1,4 +1,4 @@
-function Header() {
+function Header () {
   return <h1>Header to the page.</h1>;
 }
 

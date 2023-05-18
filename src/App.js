@@ -1,16 +1,17 @@
-import Header from "./Header";
-import WelcomeBack from "./WelcomeBack";
-import Footer from "./Footer";
+import React, { useState } from 'react';
 
-function App() {
+function App () {
+  const [subscribed, setSubscribed] = useState(false);
+  console.log('Subscribed status:', subscribed);
+
   return (
-    <>
-      <Header />
-      <WelcomeBack name="Joe" />
-      <WelcomeBack name="Anna" />
-      <WelcomeBack />
-      <Footer />
-    </>
+    <section>
+      <p>Please click to subscribe to my updates!</p>
+
+      <button onClick={() => setSubscribed(!subscribed)}>
+        {subscribed ? 'Unsubscribe' : 'Subscribe'}
+      </button>
+    </section>
   );
 }
 
